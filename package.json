@@ -1,0 +1,68 @@
+{
+  "name": "base-nextjs-ssr",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "jest",
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "format-prettier": "prettier --write **/*.{js,jsx,ts,tsx,css,scss,json}"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx,css,scss,json}": [
+      "prettier --write",
+      "git add ."
+    ]
+  },
+  "dependencies": {
+    "@zeit/next-css": "latest",
+    "@zeit/next-sass": "latest",
+    "apisauce": "latest",
+    "i18next-browser-languagedetector": "latest",
+    "moment": "latest",
+    "next": "latest",
+    "node-sass": "^latest",
+    "ramda": "latest1",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-i18next": "latest",
+    "react-redux": "latest",
+    "redux": "latest",
+    "redux-persist": "latest",
+    "reselect": "latest"
+  },
+  "devDependencies": {
+    "@types/i18next": "latest",
+    "@types/jest": "latest",
+    "@types/next": "latest",
+    "@types/next-redux-saga": "latest",
+    "@types/node": "latest",
+    "@types/ramda": "latest",
+    "@types/react": "latest",
+    "@types/react-bootstrap": "latest",
+    "@types/react-dom": "latest",
+    "@types/react-redux": "latest",
+    "@types/redux-logger": "latest",
+    "@types/redux-saga": "latest",
+    "babel-core": "latest",
+    "babel-jest": "latest",
+    "babel-plugin-transform-remove-console": "latest",
+    "enzyme": "latest",
+    "enzyme-adapter-react-16": "latest",
+    "husky": "latest",
+    "jest": "latest",
+    "lint-staged": "latest",
+    "prettier": "latest",
+    "react-addons-test-utils": "latest",
+    "react-test-renderer": "latest",
+    "redux-devtools-extension": "latest",
+    "redux-logger": "latest",
+    "tsconfig-paths-webpack-plugin": "^3.2.0",
+    "typescript": "latest"
+  }
+}
