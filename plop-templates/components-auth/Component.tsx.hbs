@@ -2,13 +2,18 @@ import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { useSelector, useDispatch } from "react-redux";
 import "./styles.scss";
+import { withAuthSync } from "utils/auth";
 
-interface {{name}}Props {}
+
+interface {{name}}Props {
+  token: string;
+}
 const {{name}}: React.SFC<{{name}}Props> = (props: {{name}}Props): JSX.Element => {
+  const { token } = props;
   const dispatch = useDispatch();
   const { t } = useTranslation();
   useEffect(() => {}, []);
 
   return <div>{{name}}</div>;
 };
-export default {{name}};
+export default withAuthSync({{name}});

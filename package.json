@@ -20,12 +20,15 @@
     ]
   },
   "dependencies": {
+    "@types/moment": "^2.13.0",
     "@zeit/next-css": "latest",
     "@zeit/next-sass": "latest",
     "apisauce": "latest",
     "i18next-browser-languagedetector": "latest",
-    "moment": "latest",
+    "js-cookie": "^2.2.1",
+    "moment": "^2.24.0",
     "next": "latest",
+    "next-cookies": "^1.1.3",
     "node-sass": "^latest",
     "ramda": "latest1",
     "react": "latest",

@@ -1,6 +1,6 @@
 import { create } from "apisauce";
 
-import * as Constants from "util/constants";
+import * as Constants from "utils/constants";
 
 const api = create({
   baseURL: Constants.ENDPOINT_API,

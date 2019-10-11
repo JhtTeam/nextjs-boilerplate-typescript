@@ -10,6 +10,26 @@ const requireField = fieldName => {
 };
 
 module.exports = plop => {
+  plop.setGenerator("page", {
+    description: "Create a reusable page",
+    prompts: [
+      {
+        type: "input",
+        name: "name",
+        message: "What is your page name?",
+        validate: requireField("name")
+      }
+    ],
+    actions: [
+      {
+        type: "add",
+        path: "pages/{{name}}/index.tsx",
+        templateFile: "plop-templates/pages/Page.tsx.hbs",
+        skipIfExists: true
+      }
+    ]
+  });
+
   plop.setGenerator("screen", {
     description: "Create a reusable screen",
     prompts: [
@@ -20,20 +40,64 @@ module.exports = plop => {
         validate: requireField("name")
       }
     ],
-    actions: [
+    actions: function(data) {
+      const actions = [
+        {
+          type: "add",
+          path: "src/screens/{{name}}/index.tsx",
+          templateFile: "plop-templates/components/Component.tsx.hbs",
+          skipIfExists: true
+        },
+        {
+          type: "add",
+          path: "src/screens/{{name}}/styles.scss",
+          templateFile: "plop-templates/components/Component.styles.scss.hbs",
+          skipIfExists: true
+        },
+        {
+          type: "add",
+          path: "pages/{{lowerCase name}}/index.tsx",
+          templateFile: "plop-templates/pages/Page.tsx.hbs",
+          skipIfExists: true
+        }
+      ];
+      return actions;
+    }
+  });
+
+  plop.setGenerator("screenAuth", {
+    description: "Create a reusable screen",
+    prompts: [
       {
-        type: "add",
-        path: "src/screens/{{name}}/index.tsx",
-        templateFile: "plop-templates/components/Component.tsx.hbs",
-        skipIfExists: true
-      },
-      {
-        type: "add",
-        path: "src/screens/{{name}}/styles.scss",
-        templateFile: "plop-templates/components/Component.styles.scss.hbs",
-        skipIfExists: true
+        type: "input",
+        name: "name",
+        message: "What is your screen name?",
+        validate: requireField("name")
       }
-    ]
+    ],
+    actions: function(data) {
+      const actions = [
+        {
+          type: "add",
+          path: "src/screens/{{name}}/index.tsx",
+          templateFile: "plop-templates/components-auth/Component.tsx.hbs",
+          skipIfExists: true
+        },
+        {
+          type: "add",
+          path: "src/screens/{{name}}/styles.scss",
+          templateFile: "plop-templates/components-auth/Component.styles.scss.hbs",
+          skipIfExists: true
+        },
+        {
+          type: "add",
+          path: "pages/{{lowerCase name}}/index.tsx",
+          templateFile: "plop-templates/pages/Page.tsx.hbs",
+          skipIfExists: true
+        }
+      ];
+      return actions;
+    }
   });
 
   plop.setGenerator("screenComponent", {

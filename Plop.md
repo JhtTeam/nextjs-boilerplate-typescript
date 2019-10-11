@@ -17,3 +17,7 @@ ex: plop saga user
 4. Create the reducer
 plop reducer {{name}
 ex: plop reducer user
+
+5. Create the new screen auth
+plop screenAuth {{name}}
+ex: plop screen Profile
