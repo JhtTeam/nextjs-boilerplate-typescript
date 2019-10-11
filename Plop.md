@@ -21,3 +21,7 @@ ex: plop reducer user
 5. Create the new screen auth
 plop screenAuth {{name}}
 ex: plop screen Profile
+
+6. Create the new service
+plop service {{name}}
+ex: plop service user
