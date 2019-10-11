@@ -1,8 +1,8 @@
-import { api } from "services/api"
+import { useTranslation } from "react-i18next";
 
 const IndexPage = () => {
-  api.get("/")
-  return <h1>Testing Next.js App written in TypeScript with Jest</h1>
-}
+  const { t } = useTranslation();
+  return <h1>{t('wellcome')}</h1>;
+};
 
-export default IndexPage
+export default IndexPage;

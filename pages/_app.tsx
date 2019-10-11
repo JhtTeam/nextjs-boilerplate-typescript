@@ -3,6 +3,7 @@ import React from 'react'
 import { Provider } from 'react-redux';
 import withReduxStore, { IStore } from 'utils/withRedux';
 import { AppPropsType } from 'next/dist/next-server/lib/utils';
+import "i18n";
 
 interface Props {
   reduxStore: IStore
