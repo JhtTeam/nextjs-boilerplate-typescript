@@ -11,7 +11,7 @@
     "noUnusedParameters": true,
     "removeComments": false,
     "preserveConstEnums": true,
-    "sourceMap": true,
+    "sourceMap": false,
     "skipLibCheck": true,
     "baseUrl": "./src",
     "typeRoots": ["./node_modules/@types"],
