@@ -32,7 +32,7 @@ export const auth = ctx => {
 };
 
 export const withAuthSync = WrappedComponent => {
-  const Wrapper = (props: any) => {};
+  const Wrapper = () => {};
 
   Wrapper.getInitialProps = async ctx => {
     const token = auth(ctx);
