@@ -27,7 +27,7 @@
     "apisauce": "latest",
     "i18next-browser-languagedetector": "latest",
     "js-cookie": "^2.2.1",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "next": "latest",
     "next-cookies": "^1.1.3",
     "node-sass": "^latest",
